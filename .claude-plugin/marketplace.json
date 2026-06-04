@@ -1,30 +1,43 @@
 {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "headroom-marketplace",
   "owner": {
-    "name": "Headroom Contributors"
+    "name": "Headroom Contributors",
+    "url": "https://github.com/chopratejas/headroom",
+    "type": "organization"
   },
   "metadata": {
     "description": "Headroom marketplace for Claude Code and GitHub Copilot CLI plugins.",
-    "version": "0.22.3"
+    "version": "0.22.3",
+    "license": "MIT",
+    "categories": ["developer-tools", "ai-assistants"],
+    "updatedAt": "2025-06-04"
   },
   "plugins": [
     {
       "name": "headroom",
-      "source": "./plugins/headroom-agent-hooks",
-      "description": "Headroom startup hooks for Claude Code and GitHub Copilot CLI.",
       "version": "0.22.3",
+      "description": "Headroom startup hooks for Claude Code and GitHub Copilot CLI.",
+      "source": "./plugins/headroom-agent-hooks",
+      "type": "agent-hook",
+      "license": "MIT",
+      "engines": {
+        "claude-code": ">=1.0.0",
+        "copilot-cli": ">=1.0.0"
+      },
       "author": {
         "name": "Headroom Contributors",
         "url": "https://github.com/chopratejas/headroom"
       },
       "homepage": "https://github.com/chopratejas/headroom",
-      "repository": "https://github.com/chopratejas/headroom",
-      "keywords": [
-        "headroom",
-        "hooks",
-        "claude-code",
-        "copilot-cli"
-      ]
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/chopratejas/headroom"
+      },
+      "bugs": {
+        "url": "https://github.com/chopratejas/headroom/issues"
+      },
+      "keywords": ["headroom", "hooks", "claude-code", "copilot-cli"]
     }
   ]
 }
